@@ -6,14 +6,16 @@ import { CourseComponent } from './course.component';
 import { Courses } from './courses';
 import { ChildComponent } from './child.component';
 import { ParentComponent } from './parent.component';
+import { PropertyComponent } from './property.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseComponent,
     ParentComponent,
-    ChildComponent
-  ],
+    ChildComponent,
+    PropertyComponent
+    ],
   imports: [
     BrowserModule
   ],
