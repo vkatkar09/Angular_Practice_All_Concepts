@@ -7,6 +7,8 @@ import { Courses } from './courses';
 import { ChildComponent } from './child.component';
 import { ParentComponent } from './parent.component';
 import { PropertyComponent } from './property.component';
+import { UserComponent } from './user.component';
+import { ContentPipe } from './content.pipes';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { PropertyComponent } from './property.component';
     CourseComponent,
     ParentComponent,
     ChildComponent,
-    PropertyComponent
+    PropertyComponent,
+    UserComponent,
+    ContentPipe
     ],
   imports: [
     BrowserModule
