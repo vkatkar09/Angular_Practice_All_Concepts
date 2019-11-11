@@ -9,6 +9,7 @@ import { ParentComponent } from './parent.component';
 import { PropertyComponent } from './property.component';
 import { UserComponent } from './user.component';
 import { ContentPipe } from './content.pipes';
+import { CustomDirective } from './custom.directives';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContentPipe } from './content.pipes';
     ChildComponent,
     PropertyComponent,
     UserComponent,
-    ContentPipe
+    ContentPipe,
+    CustomDirective
     ],
   imports: [
     BrowserModule

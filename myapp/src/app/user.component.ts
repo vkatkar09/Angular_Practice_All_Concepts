@@ -3,7 +3,7 @@ import {Component} from '@angular/core';
 @Component({
     selector: 'app-user',
     template : `
-    <ul *ngIf="userdeatils">
+    <ul *ngIf="userdeatils" cccardD>
     <li>{{userdeatils.name | uppercase | lowercase}}</li>
     <li>{{userdeatils.price | currency : 'USD' }}</li>
     <li>{{userdeatils.number | number }}</li>
