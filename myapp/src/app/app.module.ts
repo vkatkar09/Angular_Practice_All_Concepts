@@ -10,6 +10,8 @@ import { PropertyComponent } from './property.component';
 import { UserComponent } from './user.component';
 import { ContentPipe } from './content.pipes';
 import { CustomDirective } from './custom.directives';
+import { TemplateFormComponent } from './template-form/template-form.component';
+import {FormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -20,10 +22,12 @@ import { CustomDirective } from './custom.directives';
     PropertyComponent,
     UserComponent,
     ContentPipe,
-    CustomDirective
+    CustomDirective,
+    TemplateFormComponent
     ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [Courses],
   bootstrap: [AppComponent]
