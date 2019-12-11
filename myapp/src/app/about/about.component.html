@@ -1,0 +1,20 @@
+<p>about works!</p>
+<a routerLink="about1">About 1</a>
+<a routerLink="about2">About 2</a>
+<ul class="list-inline"
+    *ngFor="let pro of products"
+>
+    <li>
+        <a routerLink="/product/{{pro.id}}">
+            {{pro.name}}
+        </a>
+    </li>
+</ul>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

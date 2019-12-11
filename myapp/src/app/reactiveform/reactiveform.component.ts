@@ -25,9 +25,9 @@ export class ReactiveformComponent implements OnInit {
   Save(data : Iuser){
     this.submitted = true;
     if(!this.userForm.valid){
-      return;
+      return; // if userForm status is invalid then return nothing-> no action
     }else{
-      console.log(data);
+      console.log(data);//over all everything is valid then only console the data
     }
    
   }
