@@ -2,4 +2,18 @@
 <div class="form-group">
     <input type="search" class="form-control" id="search1" placeholder="Search anything...">
 </div>
-<app-reactiveform></app-reactiveform>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let user of userData">
+            <div class="card border-danger">
+              <div class="card-body">
+                <h4 class="card-title">{{user.id}}</h4>
+                <p class="card-text">{{user.body}}</p>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <app-reactiveform></app-reactiveform> -->
