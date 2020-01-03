@@ -4,9 +4,11 @@ import { AboutComponent } from './about/about.component';
 import { About1Component } from './about1/about1.component';
 import { About2Component } from './about2/about2.component';
 import { ProductComponent } from './product/product.component';
+import { Authguard } from './authguard/auth';
 export const routes : Route[] = [{
     path : 'home',
-    component : HomeComponent
+    component : HomeComponent,
+    canActivate : [Authguard]
 },
 {
     path : 'about',

@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class ContactComponent implements OnInit {
  public Login : FormGroup;
  public submitted = false;
+ public validateError : string;
   constructor(private fb : FormBuilder, private userService : UserRegisterServices, private router: Router) { }
 
   ngOnInit() {
@@ -28,13 +29,19 @@ export class ContactComponent implements OnInit {
     if(!this.Login.valid){
       return;
     }
-    else{
-    this.userService.UserLogin(data).subscribe(data => {
-      console.log(data);
+    this.userService.UserLogin(data)
+      .subscribe(data => {
+
+        if(data.UserIdentity){
+          alert('Login successful..!');
+          this.router.navigateByUrl('/home');
+          console.log(data);
+        }else{
+          this.validateError = data.Error;
+          console.log(data);
+        }
     })
-    alert('Login successful..!');
-    this.router.navigateByUrl('/home');
+
      console.log(data);
-    }
   }
 }

@@ -9,4 +9,10 @@
     <li class="nav-item">
         <a class="nav-link" routerLink="/contact">Contact</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" (click)="Logout()" *ngIf="userName">Logout</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" *ngIf="userName">Hello, {{userName.FirstName}} {{userName.LastName}}!</a>
+    </li>
 </ul>
